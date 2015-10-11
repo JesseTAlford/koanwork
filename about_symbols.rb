@@ -35,7 +35,7 @@ class AboutSymbols < Neo::Koan
   #
   # Why do we convert the list of symbols to strings and then compare
   # against the string value rather than against symbols?
-  # 
+  #
   # So, I'm not sure about this.
   # It's clear that symbols and strings don't match
   # So the thing we're matching for and the actual data have to match better than that
@@ -78,8 +78,8 @@ class AboutSymbols < Neo::Koan
 
   def test_symbols_are_not_strings
     symbol = :ruby
-    assert_equal __, symbol.is_a?(String)
-    assert_equal __, symbol.eql?("ruby")
+    assert_equal false, symbol.is_a?(String)
+    assert_equal false, symbol.eql?("ruby")
   end
 
   def test_symbols_do_not_have_string_methods

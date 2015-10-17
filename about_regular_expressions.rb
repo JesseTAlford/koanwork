@@ -29,18 +29,20 @@ class AboutRegularExpressions < Neo::Koan
     assert_equal "abb", "abbcccddddeeeee"[/ab*/]
     assert_equal "a", "abbcccddddeeeee"[/az*/]
     assert_equal "", "abbcccddddeeeee"[/z*/]
-
+  end
     # THINK ABOUT IT:
     #
     # When would * fail to match?
-  end
+    # When there was not a preceeding character to modify.
+    # Oops, no, that just fails to load. Um, when the target isn't a string?
+
 
   # THINK ABOUT IT:
   #
   # We say that the repetition operators above are "greedy."
   #
   # Why?
-
+  # Because they will take as much as they can.
   # ------------------------------------------------------------------
 
   def test_the_left_most_match_wins
